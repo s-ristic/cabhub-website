@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CabHub Website</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script defer src="./js/index.js"></script>
+  </head>
+
+  <body>
+    <!-- header start -->
+
+    <header id="header" class="header">
+      <nav>
+        <a href="#" class="header__logo">
+          <img src="./images/logo.svg" alt="" />
+        </a>
+
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#order">Order Now</a></li>
+          <li><a href="#contacts">Contacts</a></li>
+        </ul>
+
+        <button class="header__menuBtn">
+          <i class="fas fa-bars header__menuBtnOpen"></i>
+          <i class="fas fa-times header__menuBtnClose"></i>
+        </button>
+      </nav>
+
+      <div class="header__text">
+        <h1>Book Cab Now</h1>
+        <p class="header__textNumber">+123 4567 8900</p>
+        <p class="header__textWebsite">www.cabhub.com</p>
+      </div>
+
+      <figure class="header__imageBox">
+        <img src="./images/header-car.png" alt="" />
+      </figure>
+    </header>
+
+    <main>
+      <!-- best in city -->
+
+      <section id="best" class="best">
+        <div class="best__text">
+          <h2><span>Best in city</span>Trusted cab services in New York</h2>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+            possimus alias corrupti nihil reiciendis molestiae aperiam earum
+            excepturi dolore, repudiandae sed quos animi provident nemo in non
+            vero accusantium voluptates eius maiores natus necessitatibus. In
+            similique impedit modi consectetur obcaecati?
+          </p>
+
+          <a href="#readmore" class="btn-dark">Read More</a>
+        </div>
+
+        <div class="best__form">
+          <form action="#form" method="POST">
+            <fieldset>
+              <legend>Book a <span>cab</span></legend>
+
+              <div class="best__formInputBox">
+                <input type="text" placeholder="Name" />
+                <input type="tel" placeholder="Phone" />
+              </div>
+              <div class="best__formInputBox">
+                <input type="text" placeholder="When" />
+                <input type="text" placeholder="Time" />
+              </div>
+              <div class="best__formInputBox">
+                <input type="text" placeholder="Start" />
+                <input type="text" placeholder="End" />
+              </div>
+              <div class="best__formInputBox">
+                <select name="vehicle" id="vehicle">
+                  <option value="BMW">BMW</option>
+                  <option value="Audi">Audi</option>
+                  <option value="Mercedes">Mercedes</option>
+                </select>
+              </div>
+              <div class="best__formInputBox">
+                <button type="submit" class="btn-dark">Submit</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+
+      <!-- our tariffs -->
+
+      <section id="tariffs" class="tariffs">
+        <h2><span>Our</span>Tariffs</h2>
+
+        <div class="tariffs__card">
+          <figure class="tariffs__cardImageBox">
+            <img src="./images/tariff-car.png" alt="" />
+          </figure>
+
+          <div class="tariffs__cardContent">
+            <h3>Economy Class</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta,
+              aperiam cupiditate. Rerum quibusdam ratione optio.
+            </p>
+
+            <span class="tariffs__cardContentPrice">$1.5/MI</span>
+
+            <a href="#readmore" class="btn-yellow">Read More</a>
+          </div>
+        </div>
+
+        <div class="tariffs__card">
+          <figure class="tariffs__cardImageBox">
+            <img src="./images/tariff-car.png" alt="" />
+          </figure>
+
+          <div class="tariffs__cardContent">
+            <h3>Standard Class</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta,
+              aperiam cupiditate. Rerum quibusdam ratione optio.
+            </p>
+
+            <span class="tariffs__cardContentPrice">$1.5/MI</span>
+
+            <a href="#readmore" class="btn-dark">Read More</a>
+          </div>
+        </div>
+
+        <div class="tariffs__card">
+          <figure class="tariffs__cardImageBox">
+            <img src="./images/tariff-car.png" alt="" />
+          </figure>
+
+          <div class="tariffs__cardContent">
+            <h3>Business Class</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta,
+              aperiam cupiditate. Rerum quibusdam ratione optio.
+            </p>
+
+            <span class="tariffs__cardContentPrice">$1.5/MI</span>
+
+            <a href="#readmore" class="btn-yellow">Read More</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- we do best than you wish -->
+
+      <section id="wish" class="wish">
+        <h2><span>We do best</span>Than you wish</h2>
+
+        <div class="wish__card">
+          <div class="wish__cardIconBox"><i class="fas fa-star"></i></div>
+          <div class="wish__cardText">
+            <h3>Home Pickup</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut,
+              commodi repellendus quia incidunt nobis harum.
+            </p>
+          </div>
+        </div>
+
+        <div class="wish__card">
+          <div class="wish__cardIconBox">
+            <i class="fas fa-hourglass-end"></i>
+          </div>
+          <div class="wish__cardText">
+            <h3>Fast Booking</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut,
+              commodi repellendus quia incidunt nobis harum.
+            </p>
+          </div>
+        </div>
+
+        <div class="wish__card">
+          <div class="wish__cardIconBox">
+            <i class="fab fa-fort-awesome"></i>
+          </div>
+          <div class="wish__cardText">
+            <h3>Business For Ride</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut,
+              commodi repellendus quia incidunt nobis harum.
+            </p>
+          </div>
+        </div>
+
+        <div class="wish__card">
+          <div class="wish__cardIconBox"><i class="fas fa-cog"></i></div>
+          <div class="wish__cardText">
+            <h3>GPS Searching</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut,
+              commodi repellendus quia incidunt nobis harum.
+            </p>
+          </div>
+        </div>
+
+        <a href="#readmore" class="btn-yellow">Read More</a>
+      </section>
+
+      <!-- download -->
+
+      <section id="download" class="download">
+        <h2><span>Download</span>Best cab services</h2>
+
+        <div class="download__text">
+          <h3>
+            Download the Cab voucher app free! <br />Get Exciting New Offers
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            consequuntur sit expedita, molestiae aliquid nemo soluta libero
+            odit! Culpa, id!
+          </p>
+
+          <div class="download__textBtns">
+            <a href="#googleplay"
+              ><img src="./images/button-google-play.png" alt=""
+            /></a>
+            <a href="#appstore"
+              ><img src="./images/button-app-store.png" alt=""
+            /></a>
+          </div>
+        </div>
+
+        <figure class="download__imageBox">
+          <img src="./images/mobile.png" alt="" />
+        </figure>
+      </section>
+
+      <!-- testimonials -->
+
+      <section id="testimonials" class="testimonials">
+        <h2><span>Happy clients</span>Testimonials</h2>
+
+        <div class="testimonials__card">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam esse
+            tenetur accusamus quia aperiam cupiditate blanditiis maxime soluta
+            impedit officia.
+          </p>
+
+          <div class="testimonials__cardCreator">
+            <img src="./images/testimonial-1.jpg" alt="" />
+            <h3>John Doe<span>Business Man</span></h3>
+          </div>
+        </div>
+
+        <div class="testimonials__card">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam esse
+            tenetur accusamus quia aperiam cupiditate blanditiis maxime soluta
+            impedit officia.
+          </p>
+
+          <div class="testimonials__cardCreator">
+            <img src="./images/testimonial-2.jpg" alt="" />
+            <h3>Jane Smith<span>CEO</span></h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- we are ready 24/7 -->
+
+      <div id="number" class="number">
+        <p>We are ready to take your call 24 hours, 7 days!</p>
+        <p>+123 4567 8900</p>
+      </div>
+    </main>
+
+    <!-- footer -->
+
+    <footer id="footer" class="footer">
+      <div class="footer__column">
+        <h2>About cab hub</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis,
+          excepturi aliquid. A deleniti minus odit adipisci! Aut corporis
+          maiores, facilis iure earum nulla? Ad a nemo illum dolorem consectetur
+          vel.
+        </p>
+
+        <ul>
+          <li>
+            <a href="#facebook"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="#google"><i class="fab fa-google-plus-g"></i></a>
+          </li>
+          <li>
+            <a href="#twitter"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#instagram"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__column">
+        <h2>Download</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio,
+          suscipit.
+        </p>
+
+        <ul>
+          <li>
+            Android Users <span><i class="fas fa-robot"></i></span>
+          </li>
+          <li>
+            iOS Users <span><i class="fab fa-apple"></i></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__column">
+        <h2>Contact</h2>
+
+        <ul>
+          <li>
+            <span><i class="fas fa-map-marker-alt"></i></span>123, Main Street,
+            New York, New York, USA 789456
+          </li>
+          <li>
+            <span><i class="fas fa-mobile-alt"></i></span>+123 4567 8900
+          </li>
+          <li>
+            <span><i class="fas fa-envelope"></i></span>mail@cabhub.com
+          </li>
+          <li>
+            <span><i class="fas fa-mouse-pointer"></i></span>www.cabhub.com
+          </li>
+        </ul>
+      </div>
+
+      <p class="footer__copyright">
+        Copyright &copy; 2021 CabHub. Savo Ristic.
+      </p>
+    </footer>
+  </body>
+</html>

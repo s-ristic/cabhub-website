@@ -1,0 +1,52 @@
+@use '../utils' as *;
+
+.download {
+  position: relative;
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding-bottom: 40rem;
+
+  @include mq(lg) {
+    padding: 5rem 0 10rem;
+  }
+
+  &__text {
+    max-width: 40rem;
+    margin-top: 5rem;
+
+    &Btns {
+      @include flex($justify-content: space-between);
+
+      a {
+        position: relative;
+        width: 9.5rem;
+        height: 3.04rem;
+        width: 12.7rem;
+        height: 4.07rem;
+
+        @include mq(lg) {
+          width: 19rem;
+          height: 6.08rem;
+        }
+
+        img {
+          object-fit: contain;
+          border-radius: border-radius(xl);
+        }
+      }
+    }
+  }
+
+  &__imageBox {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 26rem;
+    height: 35rem;
+
+    img {
+      object-fit: contain;
+    }
+  }
+}

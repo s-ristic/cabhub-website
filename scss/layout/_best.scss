@@ -1,0 +1,76 @@
+@use '../utils' as *;
+
+.best {
+  padding-top: 10rem;
+  background: $main-color;
+  @include flex(column);
+
+  @include mq(lg) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__text {
+    width: 100%;
+    margin-bottom: 5rem;
+
+    @include mq(lg) {
+      width: 45%;
+      margin-bottom: 0;
+      margin-right: 3rem;
+    }
+  }
+
+  &__form {
+    max-width: 32rem;
+    background: $light-color;
+    box-shadow: box-shadow(m);
+
+    fieldset {
+      border: none;
+
+      legend {
+        width: 100%;
+        background: $text-color;
+        padding: 1rem 2rem;
+        font-size: font-size(l);
+        text-transform: uppercase;
+        color: $light-color;
+
+        span {
+          color: $main-color;
+        }
+      }
+    }
+
+    &InputBox {
+      padding: 3rem 2rem 0;
+      @include flex($justify-content: space-between);
+
+      &:last-of-type {
+        padding-bottom: 3rem;
+      }
+
+      input {
+        outline: none;
+        border: none;
+        border-bottom: 0.1rem solid $text-color;
+        width: 47%;
+        font-size: font-size(s);
+
+        &::placeholder {
+          color: $text-color;
+        }
+      }
+
+      select {
+        font-size: font-size(s);
+      }
+
+      button {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}

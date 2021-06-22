@@ -1,0 +1,132 @@
+@use '../utils' as *;
+
+.header {
+  position: relative;
+  padding: 2rem 3rem 15rem;
+  background: $text-color url('../images/header-bg.jpg') center/100% 100%;
+  background-blend-mode: darken;
+
+  @include mq(lg) {
+    padding: 2rem 4rem 40rem;
+  }
+
+  nav {
+    position: relative;
+    z-index: 1;
+    @include flex($justify-content: space-between);
+
+    ul {
+      position: absolute;
+      top: 7rem;
+      left: 0;
+      width: 100%;
+      background: $text-color;
+      padding: 2rem 0;
+      @include flex(column);
+      visibility: hidden;
+      opacity: 0;
+      @extend %transition;
+
+      @include mq(lg) {
+        position: relative;
+        flex-direction: row;
+        top: initial;
+        left: initial;
+        width: initial;
+        background: transparent;
+        padding: 0;
+        visibility: visible;
+        opacity: 1;
+      }
+
+      li {
+        margin: 1rem 0;
+
+        @include mq(lg) {
+          margin: 0;
+          margin-right: 2rem;
+        }
+
+        a {
+          color: $light-color;
+          text-transform: uppercase;
+          padding: 0.5rem 1.5rem;
+          border-radius: border-radius(xl);
+          font-weight: font-weight(bold);
+          @extend %transition;
+
+          &:hover {
+            background: $main-color;
+            color: $text-color;
+          }
+        }
+      }
+    }
+  }
+
+  nav.menu--open ul {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  nav.menu--open .header__menuBtnClose {
+    display: block;
+  }
+  nav.menu--open .header__menuBtnOpen {
+    display: none;
+  }
+
+  &__logo {
+    position: relative;
+    width: 12rem;
+    height: 5rem;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &__menuBtn {
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+    line-height: 4.5rem;
+    background: $main-color;
+    font-size: font-size(l);
+
+    @include mq(lg) {
+      display: none;
+    }
+
+    &Close {
+      display: none;
+    }
+  }
+
+  &__text {
+    margin-top: 5rem;
+  }
+
+  &__imageBox {
+    position: absolute;
+    bottom: -5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 26rem;
+    height: 17rem;
+
+    @include mq(lg) {
+      width: 65rem;
+      height: 40rem;
+    }
+
+    img {
+      object-fit: contain;
+    }
+  }
+}

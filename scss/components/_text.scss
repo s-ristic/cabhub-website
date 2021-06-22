@@ -1,0 +1,192 @@
+@use '../utils/' as *;
+
+h1 {
+  font-size: font-size(l);
+  color: $main-color;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  font-size: font-size(l);
+  color: $text-color;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+
+  @include mq(lg) {
+    font-size: font-size(xl);
+  }
+
+  span {
+    display: block;
+    font-size: 0.7em;
+    color: $main-color;
+  }
+}
+
+h3 {
+  font-size: font-size(m);
+  color: $text-color;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: font-size(s);
+  color: $main-color;
+}
+
+p {
+  color: $text-color;
+  font-size: font-size(s);
+}
+
+.header {
+  &__textNumber {
+    font-size: font-size(xl);
+    font-weight: font-weight(bold);
+    text-align: center;
+    color: $light-color;
+
+    @include mq(lg) {
+      font-size: font-size(xxl);
+    }
+  }
+
+  &__textWebsite {
+    text-align: center;
+    color: $light-color;
+    font-size: font-size(m);
+    letter-spacing: 0.5rem;
+    padding-left: 0.5rem;
+    text-transform: uppercase;
+
+    @include mq(lg) {
+      font-size: font-size(l);
+      letter-spacing: 1rem;
+      padding-left: 1rem;
+    }
+  }
+}
+
+.best {
+  h2 {
+    text-align: left;
+    line-height: 1.2;
+
+    span {
+      color: inherit;
+    }
+  }
+
+  p {
+    margin: 2rem 0 4rem;
+  }
+}
+
+.tariffs {
+  h2 {
+    grid-column: 1/-1;
+    margin-bottom: 3rem;
+
+    @include mq(lg) {
+      margin-bottom: 7rem;
+    }
+  }
+
+  h3 {
+    margin: 1rem 0;
+  }
+
+  p {
+    font-size: font-size(xs);
+  }
+}
+
+.wish {
+  h2 {
+    grid-column: 1/-1;
+    color: $light-color;
+    margin-bottom: 3rem;
+  }
+
+  h3 {
+    color: $main-color;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: $light-color;
+  }
+}
+
+.download {
+  h3 {
+    text-transform: initial;
+  }
+
+  p {
+    margin: 2rem 0 4rem;
+  }
+}
+
+.testimonials {
+  h2 {
+    grid-column: 1/-1;
+    margin-bottom: 4rem;
+    color: $light-color;
+  }
+  p {
+    color: $light-color;
+  }
+  h3 {
+    color: $main-color;
+    line-height: 1;
+
+    span {
+      display: block;
+      color: $light-color;
+      font-size: 0.7em;
+    }
+  }
+}
+
+.number {
+  p:first-of-type {
+    text-transform: uppercase;
+    font-size: font-size(l);
+    font-weight: font-weight(bold);
+
+    @include mq(lg) {
+      font-size: font-size(xl);
+    }
+  }
+
+  p:last-of-type {
+    text-transform: uppercase;
+    font-size: font-size(xxl);
+    font-weight: font-weight(bold);
+
+    @include mq(lg) {
+      font-size: font-size(xxxl);
+    }
+  }
+}
+
+.footer {
+  &__column {
+    h2 {
+      font-size: font-size(l);
+      color: $light-color;
+      text-align: left;
+      padding-bottom: 2.5rem;
+      border-bottom: 0.5rem solid $main-color;
+      margin-bottom: 2.5rem;
+    }
+
+    p {
+      color: $light-color;
+      margin-bottom: 2rem;
+    }
+  }
+}

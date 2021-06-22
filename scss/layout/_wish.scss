@@ -1,0 +1,37 @@
+@use '../utils' as *;
+
+.wish {
+  background: url('../images/womans.jpg') center/100% 100%;
+  @include grid(1, 4rem 8rem);
+
+  @include mq(lg) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__card {
+    @include flex($align-items: flex-start);
+
+    &IconBox {
+      min-width: 5rem;
+      height: 5rem;
+      border-radius: border-radius(circle);
+      background: $main-color;
+      color: $text-color;
+      line-height: 5rem;
+      text-align: center;
+      font-size: font-size(m);
+      margin-right: 3rem;
+      @extend %transition;
+    }
+
+    &:hover &IconBox {
+      background: $text-color;
+      color: $main-color;
+    }
+  }
+
+  .btn-yellow {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+}

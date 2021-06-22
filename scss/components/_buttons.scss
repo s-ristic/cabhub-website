@@ -1,0 +1,31 @@
+@use '../utils' as *;
+
+%btn {
+  display: inline-block;
+  outline: none;
+  border: none;
+  font-size: font-size(s);
+  font-weight: font-weight(bold);
+  font-family: font-family(big);
+  text-transform: uppercase;
+  border-radius: border-radius(s);
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  @extend %transition;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.btn-dark {
+  @extend %btn;
+  background: $text-color;
+  color: $light-color;
+}
+
+.btn-yellow {
+  @extend %btn;
+  background: $main-color;
+  color: $text-color;
+}

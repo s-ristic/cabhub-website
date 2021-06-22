@@ -1,0 +1,11 @@
+@use '../utils' as *;
+
+.number {
+  padding: 3rem;
+  background: $main-color;
+  text-align: center;
+
+  @include mq(lg) {
+    padding: 5rem 15rem;
+  }
+}

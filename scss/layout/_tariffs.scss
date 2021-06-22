@@ -1,0 +1,64 @@
+@use '../utils' as *;
+
+.tariffs {
+  @include grid(1, 10rem);
+
+  @include mq(lg) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  &__card {
+    position: relative;
+    background: $gray-color;
+    padding: 2rem;
+    text-align: center;
+    @extend %transition;
+
+    &:hover {
+      box-shadow: box-shadow(s);
+    }
+
+    &:nth-of-type(2) {
+      background: linear-gradient(135deg, $main-color 88%, $text-color 88%);
+
+      @include pseudo(
+        $content: '\f005',
+        $top: initial,
+        $left: initial,
+        $width: 2rem,
+        $height: 2rem
+      ) {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        bottom: 2rem;
+        right: 1.4rem;
+        color: $main-color;
+        font-size: font-size(l);
+      }
+
+      span {
+        color: $text-color;
+      }
+    }
+
+    &ImageBox {
+      position: relative;
+      margin-top: -8rem;
+      width: 100%;
+      height: 15rem;
+
+      img {
+        object-fit: contain;
+      }
+    }
+
+    &ContentPrice {
+      display: block;
+      font-size: font-size(l);
+      font-weight: font-weight(bold);
+      color: $main-color;
+      margin: 1.5rem;
+    }
+  }
+}
